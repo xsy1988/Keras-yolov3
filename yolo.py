@@ -17,9 +17,9 @@ from keras.utils import multi_gpu_model
 
 class YOLO(object):
     _defaults = {
-        "model_path": '/Users/weilaixsy/python/yolo_v3/logs1/trained_weights_final.h5',
-        "anchors_path": '/Users/weilaixsy/python/yolo_v3/data_set/annotation/tiny_yolo_clusters.txt',
-        "classes_path": '/Users/weilaixsy/python/yolo_v3/data_set/annotation/classes.txt',
+        "model_path": '/logs/trained_weights_final.h5',
+        "anchors_path": '/data_set/annotation/tiny_yolo_clusters.txt',
+        "classes_path": '/data_set/annotation/classes.txt',
         "score": 0.3,
         "iou": 0.45,
         "model_image_size": (416, 416),
