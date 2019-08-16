@@ -1,0 +1,2 @@
+使用labelImg标注工具完成标注，生成xml文件
+xml文件使用“xml_to_txt.py",将数据转换成train.py可用的txt文件
