@@ -14,10 +14,10 @@ from yolo3.utils import get_random_data
 
 def _main():
     # 定义各类数据的路径
-    annotation_path = '/Users/weilaixsy/python/yolo_v3/data_set/annotation/datas.txt'
-    log_dir = '/Users/weilaixsy/python/yolo_v3/logs3/'
-    classes_path = '/Users/weilaixsy/python/yolo_v3/data_set/annotation/classes.txt'
-    anchors_path = '/Users/weilaixsy/python/yolo_v3/data_set/annotation/yolo_clusters.txt'
+    annotation_path = '/data_set/annotation/datas.txt'
+    log_dir = '/logs3/'
+    classes_path = '/data_set/annotation/classes.txt'
+    anchors_path = '/data_set/annotation/yolo_clusters.txt'
     # 获取class_names,num_classes,anchors
     class_names = get_classes(classes_path)
     num_classes = len(class_names)
@@ -29,9 +29,9 @@ def _main():
     # 根据条件，创建对应的训练模型
     is_tiny_version = len(anchors) == 6
     if is_tiny_version:
-        model = create_tiny_model(input_shape, anchors, num_classes, freeze_body=2, weights_path='/Users/weilaixsy/python/yolo_v3/weights_data/yolov3-tiny.h5')
+        model = create_tiny_model(input_shape, anchors, num_classes, freeze_body=2, weights_path='/weights_data/yolov3-tiny.h5')
     else:
-        model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path='/Users/weilaixsy/python/yolo_v3/weights_data/yolo.h5')
+        model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path='/weights_data/yolo.h5')
 
     # TensorBoard用于可视化处理
     logging = TensorBoard(log_dir=log_dir)
@@ -105,7 +105,7 @@ def get_anchors(anchors_path):
 
 
 # 创建yolo模型
-def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2, weights_path='/Users/weilaixsy/python/yolo_v3/weights_data/yolo.h5'):
+def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2, weights_path='/weights_data/yolo.h5'):
     K.clear_session()
     image_input = Input(shape=(None, None, 3))
     h, w = input_shape
@@ -136,7 +136,7 @@ def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze
 
 
 # 创建tiny_yolo模型
-def create_tiny_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2, weights_path='/Users/weilaixsy/python/yolo_v3/weights_data/yolov3-tiny.h5'):
+def create_tiny_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2, weights_path='/weights_data/yolov3-tiny.h5'):
     K.clear_session()
     image_input = Input(shape=(None, None, 3))
     h, w = input_shape
