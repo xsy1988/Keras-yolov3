@@ -61,7 +61,7 @@ class YOLO_Kmeans:
 
     # 将得到的clusters数据，按照规范写入TXT中
     def result2txt(self, data):
-        f = open("/Users/MrZhang/Desktop/yolo_v3/data_set/annotation/tiny_yolo_clusters.txt", 'w')
+        f = open("/data_set/annotation/tiny_yolo_clusters.txt", 'w')
         row = np.shape(data)[0]
         for i in range(row):
             if i == 0:
@@ -102,7 +102,7 @@ class YOLO_Kmeans:
 
 if __name__ == "__main__":
     cluster_number = 6
-    filename = "/Users/weilaixsy/python/yolo_v3/data_set/annotation/datas.txt"
+    filename = "/data_set/annotation/datas.txt"
     kmeans = YOLO_Kmeans(cluster_number, filename)
     kmeans.txt2clusters()
 
