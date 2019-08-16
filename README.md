@@ -56,7 +56,7 @@
   >为什么loss这么高，但效果却很好，原因暂时不懂  
   ![loss](https://github.com/xsy1988/Keras-yolo3-/blob/master/data_set/test_img/test.jpg)
 ### 实测图
-  
+  ![test](https://github.com/xsy1988/Keras-yolo3-/blob/master/data_set/test_img/test.jpg)
   
   
   
