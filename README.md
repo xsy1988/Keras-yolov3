@@ -1,24 +1,24 @@
 # Keras-yolo3 中文学习笔记
 ## 简述
-在学习qqwweee的Keras-yolov3时，根据自己的理解加了一些中文注释，帮助自己理解代码具体实现了什么。     
-qqwweee的原文地址：https://github.com/qqwweee/keras-yolo3     
-不管是DeepLearning还是敲代码，都刚刚才开始学习，里面应该会有不少错误。     
-但程序是跑起来了，而且使用自己的数据，也获得了不错的训练结果。     
+>在学习qqwweee的Keras-yolov3时，根据自己的理解加了一些中文注释，帮助自己理解代码具体实现了什么。     
+>qqwweee的原文地址：https://github.com/qqwweee/keras-yolo3     
+>>不管是DeepLearning还是敲代码，都刚刚才开始学习，里面应该会有不少错误。     
+>但程序是跑起来了，而且使用自己的数据，也获得了不错的训练结果。     
 
 ## 学习心得
-  1.不能把yolo v3当做一个黑盒，仅知道如何换上自己的训练数据。最好是能每一行代码敲下来，尽量弄明白各功能是怎么实现的。虽然我仍然还有很多没整明白。  
-  2.注意qqwweee的原文中有一些bug，需要在训练时修正。   
-  3.舍得花时间。   
+  >1.不能把yolo v3当做一个黑盒，仅知道如何换上自己的训练数据。最好是能每一行代码敲下来，尽量弄明白各功能是怎么实现的。虽然我仍然还有很多没整明白。  
+  >2.注意qqwweee的原文中有一些bug，需要在训练时修正。   
+  >3.舍得花时间。   
 
 ## 我的学习步骤
 ### 1.理解代码
-  先弄明白核心代码的内容，建议顺序：yolo3/utils.py --> yolo3/model.py --> train.py --> yolo.py  
-  上面四个文件内的代码学习完后，就对yolo v3的实现机制有了基本的理解  
-  在学习 yolo3/model.py 前，建议先阅读这篇文章：https://blog.csdn.net/leviopku/article/details/82660381 ，非常有帮助  
+  >先弄明白核心代码的内容，建议顺序：yolo3/utils.py --> yolo3/model.py --> train.py --> yolo.py  
+  >上面四个文件内的代码学习完后，就对yolo v3的实现机制有了基本的理解  
+  >在学习 yolo3/model.py 前，建议先阅读这篇文章：https://blog.csdn.net/leviopku/article/details/82660381 ，非常有帮助  
 ### 2.制作训练集
-  工具：labelImg  
-  地址：https://github.com/tzutalin/labelImg  
-  自己采集好训练用的图片后，使用labelImg进行标注，得到每张图片的xml文件  
+  >工具：labelImg  
+  >地址：https://github.com/tzutalin/labelImg  
+  >自己采集好训练用的图片后，使用labelImg进行标注，得到每张图片的xml文件  
 ### 3.生成训练用的文件
   得到的xml文件中，包含了训练需要的各类信息，我们需要将其转化成darknet可以使用的数据格式  
   训练时，我们需要三个txt格式的文件：  
@@ -41,8 +41,8 @@ qqwweee的原文地址：https://github.com/qqwweee/keras-yolo3
 ### 5.训练
   以上都准备好之后，就可以在"train.py"中，进行训练了  
   我在训练的时候，先使用小批量的数据，跑了20个epoch，看看收敛情况，并对learning_rate做了调整  
-  确保一切都顺利后，扩大数据量，跑50~100个epoch  
-  训练yolo_tiny可能需要3~4小时，训练yolo可能需要一整天的时间，请一定安排好自己的时间  
+  确保一切都顺利后，扩大数据量，跑50至100个epoch  
+  训练yolo_tiny可能需要3至4小时，训练yolo可能需要一整天的时间，请一定安排好自己的时间  
 ### 6.测试
   训练完成后，会获得训练后的weights.h5文件   
   验证时加载训练获得的权重，对test用的image进行测试  
