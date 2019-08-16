@@ -2,13 +2,7 @@ import os
 import sys
 import xml.etree.ElementTree as ET
 import glob
-# import bs4
 
-#
-# os.chdir("/Users/weilaixsy/Downloads/labelImg/noted")
-# annotations = os.listdir('.')
-# annotations = glob.glob(str(annotations) + '*.xml')
-# print (annotations)
 
 
 def xml_to_txt(indir, outdir):
@@ -59,8 +53,8 @@ def xml_to_txt(indir, outdir):
     f_w.close()
 
 
-indir = "/Users/weilaixsy/python/yolo_v3/data_set/annotation_xml"
-outdir = "/Users/weilaixsy/python/yolo_v3/data_set/annotation/datas.txt"
+indir = "/data_set/annotation_xml"
+outdir = "/data_set/annotation/datas.txt"
 
 
 if __name__ == '__main__':
