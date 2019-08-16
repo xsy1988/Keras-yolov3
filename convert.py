@@ -271,9 +271,9 @@ def _main(config_path, weights_path, output_path, weights_only=True, plot_model=
 
 if __name__ == '__main__':
 
-    config_path = "/Users/weilaixsy/python/yolo_v3/yolov3-tiny.cfg"
-    weights_path = "/Users/weilaixsy/python/yolo_v3/pretrained_weights/yolov3-tiny.weights"
-    output_path = "/Users/weilaixsy/python/yolo_v3/weights_data/yolov3-tiny.h5"
+    config_path = "/yolov3-tiny.cfg"
+    weights_path = "/pretrained_weights/yolov3-tiny.weights"
+    output_path = "/weights_data/yolov3-tiny.h5"
     weights_only = True
     plot_model = True
 
