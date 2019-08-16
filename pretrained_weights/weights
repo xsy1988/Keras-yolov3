@@ -1,0 +1,5 @@
+从yolo_v3官网下载已经训练好的weights文件，放在这个文件夹里
+官网地址：https://pjreddie.com/darknet/yolo/
+可以根据自己的需要，下载yolo v3 或者 yolo v3-tiny 的weights文件
+下载后的文件，不可以直接使用，需要转换成.h5文件，才能在训练时被读取
+请在下载weights文件后，使用”convert.py“将其转换为.h5文件
