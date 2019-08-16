@@ -1,0 +1,2 @@
+自己生成训练用的datas
+每一行是一个image的信息，格式：image_file_path box1 box2 ... boxN
