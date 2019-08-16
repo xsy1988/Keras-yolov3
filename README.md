@@ -22,19 +22,19 @@
 ### 3.生成训练用的文件
   >得到的xml文件中，包含了训练需要的各类信息，我们需要将其转化成darknet可以使用的数据格式  
   >训练时，我们需要三个txt格式的文件：  
-    classes.txt 
+    classes.txt  
     ----用来存储数据集的类别  
     ----在使用labelImg标注图片后，会直接得到这个文件  
-    datas.txt  
+    datas.txt   
     ----用来存储所有的数据内容，txt内每一行代表一张图片的标注信息  
-----每一行的数据格式：image_file_path box1 box2 ... boxN  
-----每个box的数据格式：x_min,y_min,x_max,y_max,class_id  
-----例：/train_img/162.png 55,169,92,231,0 127,242,176,301,0 361,157,396,208,0  
-----使用 ”xml_to_txt.py“ ，将标注获得的xml文件转化为datas.txt  
-    clusters.txt 
-    ----在datas.txt中，记录了很多的box数据，它们拥有不同的宽高值
-----我们需要对这些数据先做一个聚类处理，使用”kmeans.py“，挑选出k个宽高值，作为所有框的代表
-----即选出先验框  
+    ----每一行的数据格式：image_file_path box1 box2 ... boxN  
+    ----每个box的数据格式：x_min,y_min,x_max,y_max,class_id  
+    ----例：/train_img/162.png 55,169,92,231,0 127,242,176,301,0 361,157,396,208,0  
+    ----使用 ”xml_to_txt.py“ ，将标注获得的xml文件转化为datas.txt  
+    clusters.txt  
+    ----在datas.txt中，记录了很多的box数据，它们拥有不同的宽高值  
+    ----我们需要对这些数据先做一个聚类处理，使用”kmeans.py“，挑选出k个宽高值，作为所有框的代表  
+    ----即选出先验框  
 ### 4.获得已经预先训练好的权重
   >从yolo_v3的官网，下载已经训练过的weights：https://pjreddie.com/darknet/yolo/  
   >官网上有详细的教程，按照指导下载即可  
