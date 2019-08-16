@@ -54,7 +54,7 @@
 ### loss
   >训练时的loss一直很高，最低也有20+，原本一直认为是有问题，但在实际测试时，发现效果不错  
   >为什么loss这么高，但效果却很好，原因暂时不懂  
-  ![loss](https://github.com/xsy1988/Keras-yolo3-/blob/master/data_set/test_img/test.jpg)
+  ![loss](https://github.com/xsy1988/Keras-yolo3-/blob/master/logs/loss.jpg)
 ### 实测图
   ![test](https://github.com/xsy1988/Keras-yolo3-/blob/master/data_set/test_img/test.jpg)
   
